@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="vLP-l6-0H6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbx-bP-P28">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knc-3z-2rw">
+                                                <rect key="frame" x="0.0" y="0.0" width="69" height="115"/>
+                                                <state key="normal" image="clock" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Rld-aL-QNL" kind="popoverPresentation" popoverAnchorView="knc-3z-2rw" id="v2y-dp-8KE">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bkv-Az-sTU">
+                                                <rect key="frame" x="69" y="0.0" width="345" height="115"/>
+                                                <subviews>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="36 °F" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XxM-oN-P9D">
+                                                        <rect key="frame" x="0.0" y="0.0" width="335" height="115"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="XxM-oN-P9D" secondAttribute="trailing" constant="10" id="I4l-gn-vje"/>
+                                                    <constraint firstItem="XxM-oN-P9D" firstAttribute="leading" secondItem="Bkv-Az-sTU" secondAttribute="leading" id="fqI-fj-bWQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="XxM-oN-P9D" secondAttribute="bottom" id="mXM-Lz-rI3"/>
+                                                    <constraint firstItem="XxM-oN-P9D" firstAttribute="top" secondItem="Bkv-Az-sTU" secondAttribute="top" id="zhH-fo-bPM"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="knc-3z-2rw" firstAttribute="width" secondItem="Bkv-Az-sTU" secondAttribute="width" multiplier="0.2" id="8lA-9y-HI8"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="358-w1-8RX">
+                                        <rect key="frame" x="0.0" y="117" width="414" height="115.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULL-Rb-eQ3">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="115.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1.48 °C" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8GY-mo-VI5">
+                                                        <rect key="frame" x="10" y="0.0" width="394" height="115.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="8GY-mo-VI5" firstAttribute="top" secondItem="ULL-Rb-eQ3" secondAttribute="top" id="GoM-94-nXl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8GY-mo-VI5" secondAttribute="trailing" constant="10" id="O9I-LE-YG0"/>
+                                                    <constraint firstItem="8GY-mo-VI5" firstAttribute="leading" secondItem="ULL-Rb-eQ3" secondAttribute="leading" constant="10" id="Vq3-6p-OXg"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8GY-mo-VI5" secondAttribute="bottom" id="cF1-og-NoJ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nD2-F8-8qB">
+                                        <rect key="frame" x="0.0" y="234.5" width="414" height="115"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuD-Yt-vuF" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="C"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clearClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4rl-fM-YjK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYD-Vo-eve" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="138.5" y="0.0" width="137" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="+/-"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signChangeClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4hf-tf-RmY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4K-5k-f2d" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="277.5" y="0.0" width="136.5" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <state key="normal" title="Convert">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="linkColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="systemTealColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="convertClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rvS-iS-bnu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="BuD-Yt-vuF" firstAttribute="width" secondItem="m4K-5k-f2d" secondAttribute="width" id="0DT-sz-1cH"/>
+                                            <constraint firstItem="BuD-Yt-vuF" firstAttribute="width" secondItem="wYD-Vo-eve" secondAttribute="width" id="tMy-pQ-qNR"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="CzA-eV-PsB">
+                                        <rect key="frame" x="0.0" y="351.5" width="414" height="115"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFr-M0-Qfp" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="7"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4wz-9G-xAg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-3A-lZm" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="138.5" y="0.0" width="137" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="8"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JtK-9C-gP3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUk-he-bQr" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="277.5" y="0.0" width="136.5" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="9"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DTE-Db-p3y"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wFr-M0-Qfp" firstAttribute="width" secondItem="PV6-3A-lZm" secondAttribute="width" id="bZx-ix-NS0"/>
+                                            <constraint firstItem="wFr-M0-Qfp" firstAttribute="width" secondItem="wUk-he-bQr" secondAttribute="width" id="mDj-Ms-ScP"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="g5y-Fo-2yM">
+                                        <rect key="frame" x="0.0" y="468.5" width="414" height="115"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-oZ-2wB" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="4"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tCk-yc-Sdi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qk-4e-hVl" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="138.5" y="0.0" width="137" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="5"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BIP-q7-cb7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI2-o0-Osp" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="277.5" y="0.0" width="136.5" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="6"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kUy-oY-AxF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="2c0-oZ-2wB" firstAttribute="width" secondItem="WI2-o0-Osp" secondAttribute="width" id="18a-Xf-iOc"/>
+                                            <constraint firstItem="2c0-oZ-2wB" firstAttribute="width" secondItem="5Qk-4e-hVl" secondAttribute="width" id="DDh-y3-ibX"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="NG5-c4-mwf">
+                                        <rect key="frame" x="0.0" y="585.5" width="414" height="115.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diO-Dc-5ph" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="136.5" height="115.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="1"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cvr-NK-iek"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjR-eu-qIC" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="138.5" y="0.0" width="137" height="115.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="2"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="owF-4F-8VG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGD-W7-V50" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="277.5" y="0.0" width="136.5" height="115.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="3"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfT-7M-iE4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="diO-Dc-5ph" firstAttribute="width" secondItem="xGD-W7-V50" secondAttribute="width" id="NUP-H1-EIJ"/>
+                                            <constraint firstItem="diO-Dc-5ph" firstAttribute="width" secondItem="zjR-eu-qIC" secondAttribute="width" id="eLp-Pr-WhD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Un4-qy-9uM">
+                                        <rect key="frame" x="0.0" y="703" width="414" height="115"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BR-Z5-Cgf" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="275.5" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="0"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="numberClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cLn-1p-GA3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDS-0T-2NF" customClass="KeypadButton" customModule="Final_Project" customModuleProvider="target">
+                                                <rect key="frame" x="277.5" y="0.0" width="136.5" height="115"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="."/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                                        <color key="value" systemColor="systemBackgroundColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                                        <color key="value" systemColor="secondarySystemFillColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="dotClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MWv-D7-Q6W"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="6BR-Z5-Cgf" firstAttribute="width" secondItem="CDS-0T-2NF" secondAttribute="width" multiplier="2" constant="2" id="s7J-Gs-Jr9"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Tbx-bP-P28" firstAttribute="height" secondItem="g5y-Fo-2yM" secondAttribute="height" id="9dR-Hv-GAO"/>
+                                    <constraint firstItem="Tbx-bP-P28" firstAttribute="height" secondItem="NG5-c4-mwf" secondAttribute="height" id="IHc-IM-qxm"/>
+                                    <constraint firstItem="Tbx-bP-P28" firstAttribute="height" secondItem="Un4-qy-9uM" secondAttribute="height" id="L9m-eG-GCe"/>
+                                    <constraint firstItem="Tbx-bP-P28" firstAttribute="height" secondItem="nD2-F8-8qB" secondAttribute="height" id="TNg-yu-jCq"/>
+                                    <constraint firstItem="Tbx-bP-P28" firstAttribute="height" secondItem="CzA-eV-PsB" secondAttribute="height" id="mo1-Ih-DpE"/>
+                                    <constraint firstItem="Tbx-bP-P28" firstAttribute="height" secondItem="358-w1-8RX" secondAttribute="height" id="whP-ia-Phh"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vLP-l6-0H6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9iw-Hy-mq0"/>
+                            <constraint firstItem="vLP-l6-0H6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HA9-7X-hMP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vLP-l6-0H6" secondAttribute="trailing" id="QHO-fI-pKu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vLP-l6-0H6" secondAttribute="bottom" id="Tzh-3h-byd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="convertButton" destination="m4K-5k-f2d" id="qZI-Am-4EQ"/>
+                        <outlet property="inputTextField" destination="8GY-mo-VI5" id="ei5-Nf-AtN"/>
+                        <outlet property="outputTextField" destination="XxM-oN-P9D" id="j7v-uc-fT7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="6Ry-Me-6An">
+            <objects>
+                <viewController id="Rld-aL-QNL" customClass="HistoryViewController" customModule="Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cwo-bX-86a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EbK-JG-Udh">
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyCell" textLabel="oRK-xk-dxi" detailTextLabel="RjN-Vc-foO" style="IBUITableViewCellStyleSubtitle" id="0O0-al-xQK">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0O0-al-xQK" id="tnC-Vt-tBZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oRK-xk-dxi">
+                                                    <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RjN-Vc-foO">
+                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rld-aL-QNL" id="mhz-SA-tE3"/>
+                                    <outlet property="delegate" destination="Rld-aL-QNL" id="ugP-lj-qa8"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mX7-xM-tWK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Recent Results" id="9KF-UH-fKi"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WJC-Rb-HWk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mX7-xM-tWK" firstAttribute="leading" secondItem="WJC-Rb-HWk" secondAttribute="leading" id="CMw-EL-Xt2"/>
+                            <constraint firstItem="EbK-JG-Udh" firstAttribute="top" secondItem="mX7-xM-tWK" secondAttribute="bottom" id="EcQ-w1-i4z"/>
+                            <constraint firstItem="WJC-Rb-HWk" firstAttribute="bottom" secondItem="EbK-JG-Udh" secondAttribute="bottom" id="WCJ-sj-grY"/>
+                            <constraint firstItem="WJC-Rb-HWk" firstAttribute="trailing" secondItem="EbK-JG-Udh" secondAttribute="trailing" id="dyg-9m-F7D"/>
+                            <constraint firstItem="mX7-xM-tWK" firstAttribute="top" secondItem="WJC-Rb-HWk" secondAttribute="top" id="gfx-YZ-3Tj"/>
+                            <constraint firstItem="WJC-Rb-HWk" firstAttribute="trailing" secondItem="mX7-xM-tWK" secondAttribute="trailing" id="oz2-fq-h51"/>
+                            <constraint firstItem="EbK-JG-Udh" firstAttribute="leading" secondItem="WJC-Rb-HWk" secondAttribute="leading" id="wlt-2n-CSL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Jg-6b-2pm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="127"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="2c0-oZ-2wB">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="5Qk-4e-hVl">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="6BR-Z5-Cgf">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="BuD-Yt-vuF">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="CDS-0T-2NF">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="PV6-3A-lZm">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="WI2-o0-Osp">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="diO-Dc-5ph">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="m4K-5k-f2d">
+            <size key="intrinsicContentSize" width="73" height="38"/>
+        </designable>
+        <designable name="wFr-M0-Qfp">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="wUk-he-bQr">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="wYD-Vo-eve">
+            <size key="intrinsicContentSize" width="34" height="42"/>
+        </designable>
+        <designable name="xGD-W7-V50">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="zjR-eu-qIC">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
